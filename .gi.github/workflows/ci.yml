@@ -1,4 +1,4 @@
-name: Python CI
+name: PHP CI
 
 on:
   push:
@@ -14,10 +14,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
       with:
-        python-version: '3.10'
+        php-version: '8.1'
 
-    - name: Run main file
-      run: python main.py
+    - name: PHP Syntax Check
+      run: php -l index.php
+
+    - name: Run PHP file
+      run: php index.php
