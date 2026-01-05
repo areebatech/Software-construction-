@@ -10,7 +10,8 @@ and GitHub Actions to automate build and testing.
 - Simple and clean project structure
 
 ## Technologies Used
-- Git
+- PHP
+- HTML
 - GitHub Actions
 
 ## CI/CD
